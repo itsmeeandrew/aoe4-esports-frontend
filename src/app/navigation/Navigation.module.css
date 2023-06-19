@@ -1,0 +1,48 @@
+.container {
+  background-color: var(--page-bg-secondary);
+  width: 100vw;
+  height: 75px;
+
+  display: flex;
+}
+
+.containerLogo {
+  width: 35%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.containerLogo h1 {
+  padding: 15px;
+}
+
+.containerLinks {
+  width: 65%;
+  padding: 0 5%;
+
+  display: flex;
+  align-items: center;
+}
+
+.containerLinks div {
+  margin: 0 2.5%
+}
+
+.containerLinks a {
+  text-decoration: none;
+  color: white;
+
+  font-size: 26px
+}
+
+.containerLinks a:hover {
+  color: cyan;
+  text-decoration: underline;
+  transition: 0.5s;
+}
+
+.containerLinks span {
+  padding-left: 5px;
+}

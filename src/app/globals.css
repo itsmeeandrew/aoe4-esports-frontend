@@ -1,15 +1,30 @@
 :root {
-  --page-bg-primary: #151515
-  --page--bg-secondary: #202020,
-  --page-text-primary: #FFFFFF
-  --series-winner: #FA824C
-  --series-loser: #B7B7B7
-  --tournament-header: #0F1970
-  --tournament-bg: #152180
-  --tournament-primary: #1E2DAE
-  --series-header: #560F70
-  --series-bg: #782097
-  --series-primary: #911EAE
-  --match-winner: #04BB00
-  --match-loser: #BB0000
+  --page-bg-primary: #151515;
+  --page-bg-secondary: #202020;
+  --page-text-primary: #FFFFFF;
+  --series-winner: #FA824C;
+  --series-loser: #B7B7B7;
+  --tournament-header: #0F1970;
+  --tournament-bg: #152180;
+  --tournament-primary: #1E2DAE;
+  --series-header: #560F70;
+  --series-bg: #782097;
+  --series-primary: #911EAE;
+  --match-winner: #04BB00;
+  --match-loser: #BB0000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color: var(--page-text-primary)
+}
+
+a {
+  text-decoration: none;
+  color: var(--page-text-primary)
 }

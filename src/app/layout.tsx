@@ -1,5 +1,6 @@
 import './globals.css'
 import { Red_Hat_Text } from 'next/font/google'
+import Navigation from './navigation/page'
 
 const redHatText = Red_Hat_Text({ subsets: ['latin'] })
 
@@ -15,8 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={redHatText.className}>{children}
-      
+      <body className={redHatText.className}>
+        <Navigation></Navigation>
+        {children}
       </body>
     </html>
   )

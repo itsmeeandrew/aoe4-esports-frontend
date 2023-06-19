@@ -5,7 +5,7 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <div>
-      <h1>AoE IV Esports</h1>
+      
     </div>
   )
 }
