@@ -5,13 +5,19 @@
   --series-winner: #FA824C;
   --series-loser: #B7B7B7;
   --tournament-header: #0F1970;
-  --tournament-bg: #152180;
-  --tournament-primary: #1E2DAE;
+  --tournament-bg: #1C2CAC;
+  --tournament-primary: #2E44FF;
   --series-header: #560F70;
   --series-bg: #782097;
   --series-primary: #911EAE;
   --match-winner: #04BB00;
   --match-loser: #BB0000;
+  
+  --default-border-radius: 13px;
+  
+  --font-size-large: 26px;
+  --font-size-medium: 20px;
+  --font-size-small: 18px 
 }
 
 * {
@@ -21,7 +27,12 @@
 }
 
 html {
-  color: var(--page-text-primary)
+  color: var(--page-text-primary);
+  height: 100vh;
+}
+
+body {
+  height: 100%;
 }
 
 a {

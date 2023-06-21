@@ -1,9 +1,10 @@
 .container {
-  background-color: var(--page-bg-secondary);
+  background-color: var(--page-bg-primary);
   width: 100vw;
   height: 75px;
 
   display: flex;
+  position: fixed;
 }
 
 .containerLogo {
@@ -34,7 +35,7 @@
   text-decoration: none;
   color: white;
 
-  font-size: 26px
+  font-size: var(--font-size-large)
 }
 
 .containerLinks a:hover {

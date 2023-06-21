@@ -1,6 +1,7 @@
 import './globals.css'
+import styles from "./layout.module.css"
 import { Red_Hat_Text } from 'next/font/google'
-import Navigation from './navigation/page'
+import Navigation from '../components/navigation/Navigation'
 
 const redHatText = Red_Hat_Text({ subsets: ['latin'] })
 
@@ -18,7 +19,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={redHatText.className}>
         <Navigation></Navigation>
-        {children}
+        <div className={styles.container}>
+          {children}
+        </div>
       </body>
     </html>
   )

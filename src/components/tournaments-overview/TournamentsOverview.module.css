@@ -1,0 +1,24 @@
+.container {
+  background-color: var(--tournament-bg);
+  width: 565px;
+  height: 100%;
+  border-radius: var(--default-border-radius);
+  padding: 14px;
+
+  overflow: auto;
+}
+
+.header h1 {
+  background-color: var(--tournament-header);
+  padding: 8px;
+  border-radius: var(--default-border-radius);
+  text-align: center;
+}
+
+.content {
+  margin-top: 25px;
+}
+
+.content > * {
+  margin: 20px 0;
+}

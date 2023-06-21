@@ -1,0 +1,1 @@
+export const shortDateFormatter = new Intl.DateTimeFormat("en-US", { month: "short", day: "2-digit" })

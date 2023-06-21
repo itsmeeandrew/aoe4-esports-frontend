@@ -1,0 +1,58 @@
+.container {
+  width: 100%;
+  background-color: var(--tournament-primary);
+  border-radius: var(--default-border-radius);
+  display: flex;
+}
+
+.logo, .information, .actions {
+  padding: 7px;
+}
+
+.logo {
+  flex-basis: 20%;
+}
+
+.information {
+  flex-basis: 47%;
+}
+
+.information > * {
+  margin-bottom: 12px;
+}
+
+.information h1 {
+  font-size: var(--font-size-large)
+}
+
+.information p {
+  font-size: var(--font-size-medium)
+}
+
+.actions {
+  flex-basis: 33%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.viewDetails {
+  background-color: var(--page-bg-secondary);
+  color: var(--page-text-primary);
+  padding: 10px 15px;
+  font-size: var(--font-size-small);
+  border: none;
+  cursor: pointer;
+  border-radius: var(--default-border-radius);
+  transition: 0.2s;
+}
+
+.viewDetails:hover {
+  background-color: var(--page-text-primary);
+  color: var(--page-bg-secondary)
+}
+
+.viewDetails span {
+  margin-left: 5px;
+}
