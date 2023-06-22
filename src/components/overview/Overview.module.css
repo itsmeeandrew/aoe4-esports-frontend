@@ -8,6 +8,10 @@
   overflow: auto;
 }
 
+.header {
+  border-radius: var(--default-border-radius)
+}
+
 .header h1 {
   background-color: var(--tournament-header);
   padding: 8px;
