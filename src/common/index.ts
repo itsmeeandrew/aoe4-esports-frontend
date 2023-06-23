@@ -20,6 +20,7 @@ export namespace Payload {
     time: string,
     tournament: string,
     tournamentRound: string,
-    tournamentRoundPhase: string
+    tournamentRoundPhase: string,
+    logoUrl: string
   }
 }

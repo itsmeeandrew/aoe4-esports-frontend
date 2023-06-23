@@ -9,7 +9,7 @@ interface SeriesTileProps {
 }
 
 export default function SeriesTile(props: SeriesTileProps) {
-  const { id, awayPlayer, awayScore, homePlayer, homeScore, date, time, tournament, tournamentRound, tournamentRoundPhase } = props.data;
+  const { id, awayPlayer, awayScore, homePlayer, homeScore, date, time, tournament, tournamentRound, tournamentRoundPhase, logoUrl } = props.data;
   const isHomeWinner = homeScore > awayScore;
 
   return (
@@ -18,7 +18,7 @@ export default function SeriesTile(props: SeriesTileProps) {
         <Image 
           width={100}
           height={100}
-          src={"https://liquipedia.net/commons/images/a/a4/Elite_Classic_allmode.png"}
+          src={logoUrl}
           alt={`Tournament logo for ${tournament}`}
         />
         <h4>{tournamentRoundPhase}</h4>

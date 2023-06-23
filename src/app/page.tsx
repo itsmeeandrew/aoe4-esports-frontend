@@ -20,7 +20,7 @@ async function getOngoingTournaments(): Promise<Payload.Tournament[]> {
 }
 
 async function getLatestResults(): Promise<Payload.Series[]> {
-  const res = await fetch("http://localhost:8080/api/series/latest")
+  const res = await fetch("http://localhost:8080/api/series/latest", { cache: "no-store" })
   if (!res.ok) {
     throw new Error("Failed to fetch data")
   }
