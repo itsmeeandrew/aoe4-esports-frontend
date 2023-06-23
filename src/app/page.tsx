@@ -2,6 +2,7 @@ import { Payload } from '@/common'
 import styles from './page.module.css'
 import Overview from '@/components/overview/Overview'
 import TournamentTile from '@/components/tournament-tile/TournamentTile'
+import SeriesTile from '@/components/series-tile/SeriesTile'
 
 async function getOngoingTournaments(): Promise<Payload.Tournament[]> {
   return [
@@ -18,12 +19,28 @@ async function getOngoingTournaments(): Promise<Payload.Tournament[]> {
   ]
 }
 
+async function getLatestResults(): Promise<Payload.Series[]> {
+  const res = await fetch("http://localhost:8080/api/series/latest")
+  if (!res.ok) {
+    throw new Error("Failed to fetch data")
+  }
+  return res.json()
+}
+
 export default async function Home() {
   const ongoingTournaments = await getOngoingTournaments()
   const ongoingTournamentTiles = ongoingTournaments.map(ot => (
     <TournamentTile 
       key={ot.id}
       data={ot}
+    />
+  ))
+
+  const latestResults = await getLatestResults()
+  const latestResultTiles = latestResults.map(lr => (
+    <SeriesTile 
+      key={lr.id}
+      data={lr}
     />
   ))
 
@@ -35,6 +52,14 @@ export default async function Home() {
         headerBgColor='var(--tournament-header-bg)'
       >
         {ongoingTournamentTiles}
+      </Overview>
+
+      <Overview
+        bgColor='var(--series-bg)'
+        headerText='Latest Results'
+        headerBgColor='var(--series-header-bg)'
+        >
+          {latestResultTiles}
       </Overview>
     </div>
   )

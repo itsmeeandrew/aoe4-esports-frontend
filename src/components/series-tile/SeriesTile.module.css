@@ -1,0 +1,66 @@
+.container {
+  width: 100%;
+  background-color: var(--series-primary);
+  border-radius: var(--default-border-radius);
+  display: flex;
+  border-radius: var(--default-border-radius);
+  min-height: 161px;
+}
+
+.logo, .information, .results, .actions {
+  padding: 7px;
+}
+
+.logo {
+  width: 25%;
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+
+.results {
+  height: 65%;
+  font-size: var(--font-size-large);
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.results div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.subWrapper {
+  display: flex;
+  height: 35%;
+}
+
+.information {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 10px;
+}
+
+.actions {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.seriesWinner {
+  color: var(--series-winner);
+}
+
+.seriesLoser {
+  color: var(--series-loser)
+}
