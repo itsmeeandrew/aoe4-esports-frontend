@@ -1,39 +1,29 @@
 import styles from "./TournamentTile.module.css"
 import Image from "next/image"
 import { Payload } from "@/common"
-import { shortDateFormatter } from "@/common/util"
-import Link from "next/link"
-import { BsArrowRight } from "react-icons/bs"
+import { formatDateFromString } from "@/common/util"
+import DrilldownButton from "../drilldown-button/DrilldownButton"
 
 export default function TournamentTile({ data }: { data: Payload.Tournament }) {
-  const startDate = new Date(data.startDate)
-  const endDate = new Date(data.endDate)
-
+  const { startDate, endDate, logoUrl, name, tier, id } = data;
   return (
     <div className={styles.container}>
       <div className={styles.logo}>
         <Image 
-          src={data.logoUrl} 
-          alt={`Tournament logo for ${data.name}`} 
+          src={logoUrl} 
+          alt={`Tournament logo for ${name}`} 
           width={120} 
           height={120} />
       </div>
       <div className={styles.information}>
-        <h1>{data.name}</h1>
-        <p>{shortDateFormatter.format(startDate)} - {shortDateFormatter.format(endDate)}</p>
-        <p>{data.tier} tier</p>
+        <h1>{name}</h1>
+        <p>{formatDateFromString(startDate)} - {formatDateFromString(endDate)}</p>
+        <p>{tier} tier</p>
       </div>
       <div className={styles.actions}>
-        <Link
-          href={`/tournament/${data.id}`}
-        >
-          <button className={styles.viewDetails}>
-            View Details 
-            <span>
-              <BsArrowRight />
-            </span>
-          </button>
-        </Link>
+        <DrilldownButton
+          text="View Details"
+          to={`/tournaments/${id}`}/>
       </div>
     </div>
   )
