@@ -41,6 +41,7 @@ export default async function Home() {
     <SeriesTile 
       key={lr.id}
       data={lr}
+      showDrilldown={true}
     />
   ))
 

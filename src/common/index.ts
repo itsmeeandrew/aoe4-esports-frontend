@@ -23,4 +23,13 @@ export namespace Payload {
     tournamentRoundPhase: string,
     logoUrl: string
   }
+
+  export interface Match {
+    id: number,
+    seriesId: number,
+    homeCivilization: string,
+    awayCivilization: string,
+    winnerPlayer: string,
+    map: string
+  }
 }

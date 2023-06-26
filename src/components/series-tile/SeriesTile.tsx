@@ -3,9 +3,11 @@ import styles from "./SeriesTile.module.css"
 import Image from "next/image"
 import DrilldownButton from "../drilldown-button/DrilldownButton";
 import { formatDateTimeFromString } from "@/common/util";
+import Conditional from "../common/conditional/Conditional";
 
 interface SeriesTileProps {
-  data: Payload.Series
+  data: Payload.Series,
+  showDrilldown: boolean
 }
 
 export default function SeriesTile(props: SeriesTileProps) {
@@ -40,9 +42,13 @@ export default function SeriesTile(props: SeriesTileProps) {
             <p>{tournamentRound}</p>
           </div>
           <div className={styles.actions}>
-            <DrilldownButton
-              text="View Matches"
-              to={`/series/${id}`} />
+            <Conditional
+              condition={props.showDrilldown}
+            >
+              <DrilldownButton
+                text="View Matches"
+                to={`/series/${id}`} />
+            </Conditional>
           </div>
         </div>
       </div>

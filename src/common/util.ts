@@ -16,3 +16,7 @@ export function formatDateTimeFromString(date?: string, time?: string): string {
     return ""
   }
 }
+
+export function getImageName(entityName: string) {
+  return entityName.toLowerCase().replaceAll(" ", "_")
+}

@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  border: 5px solid var(--page-primary-text);
+  border-radius: var(--default-border-radius)
+}
+
+.homeCivilization, .map, .awayCivilization {
+  text-align: center;
+}
+
+.homeCivilization {
+  width: 33.3%;
+}
+
+.map {
+  width: 33.4%;
+}
+
+.awayCivilization {
+  width: 33.3%;
+}
+
+.winner {
+  border-color: var(--match-winner)
+}
+
+.loser {
+  border-color: var(--match-loser)
+}

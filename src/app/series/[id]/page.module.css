@@ -1,0 +1,46 @@
+.container {
+  margin-top: 75px;
+  width: 40%;
+  min-width: 730px;
+  height: 90%;
+  border-radius: var(--default-border-radius);
+  background-color: var(--series-bg);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.seriesContainer {
+  width: 75%;
+  margin: 20px;
+}
+
+.matchesContainer {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+
+.matchesContainer > * {
+  margin: 20px 0;
+}
+
+.header {
+  display: flex;
+  width: 75%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.homePlayerName, .awayPlayerName {
+  width: 33.3%;
+}
+
+.mapName {
+  width: 33.4%;
+}
+
+.divider {
+  color: var(--page-text-primary)
+}
