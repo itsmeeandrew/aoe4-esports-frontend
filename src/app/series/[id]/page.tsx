@@ -30,13 +30,13 @@ export default async function SeriesDetails({ params }: { params: { id: string }
   const matches = await getMatches(params.id)
   const matchElements = matches.map(m => (
     <>
+      <hr className={styles.divider}></hr>
       <Match 
         data={m}
         key={m.id}
         homePlayer={series.homePlayer}
         awayPlayer={series.awayPlayer}
       />
-      <hr className={styles.divider}></hr>
     </>
   ))
   
