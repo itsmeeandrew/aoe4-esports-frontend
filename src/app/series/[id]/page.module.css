@@ -2,7 +2,7 @@
   margin: 100px 0 25px 0;
   padding-bottom: 15px;
   width: 40%;
-  min-width: 730px;
+  min-width: 760px;
   height: 90%;
   border-radius: var(--default-border-radius);
   background-color: var(--series-bg);
@@ -13,14 +13,14 @@
 }
 
 .seriesContainer {
-  width: 75%;
+  width: 80%;
   margin: 20px;
 }
 
 .matchesContainer {
   display: flex;
   flex-direction: column;
-  width: 75%;
+  width: 80%;
 }
 
 .matchesContainer > * {

@@ -18,12 +18,15 @@ export default function SeriesTile(props: SeriesTileProps) {
     <div className={styles.container}>
       <div className={styles.logo}>
         <Image 
-          width={100}
-          height={100}
+          width={props.showDrilldown ? 120 : 150} 
+          height={props.showDrilldown ? 120 : 150}
           src={logoUrl}
           alt={`Tournament logo for ${tournament}`}
         />
-        <h4>{tournamentRoundPhase}</h4>
+        <Conditional
+          condition={props.showDrilldown}>
+          <h4>{tournamentRoundPhase}</h4>
+        </Conditional>
       </div>
       <div className={styles.wrapper}>
         <div className={styles.results}>
@@ -37,19 +40,22 @@ export default function SeriesTile(props: SeriesTileProps) {
           </div>
         </div>
         <div className={styles.subWrapper}>
-          <div className={styles.information}>
-            <p>{formatDateTimeFromString(date, time)}</p>
+          <div className={`${styles.information} ${props.showDrilldown ? null : styles.informationNoDrilldown}`}>
             <p>{tournamentRound}</p>
-          </div>
-          <div className={styles.actions}>
             <Conditional
-              condition={props.showDrilldown}
-            >
+              condition={!props.showDrilldown}>
+              <p><b>{tournamentRoundPhase}</b></p>
+            </Conditional>
+            <p>{formatDateTimeFromString(date, time)}</p>
+          </div>
+          <Conditional
+            condition={props.showDrilldown}>
+            <div className={styles.actions}>
               <DrilldownButton
                 text="View Matches"
                 to={`/series/${id}`} />
-            </Conditional>
-          </div>
+            </div>
+          </Conditional>
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 const dateFormatter = new Intl.DateTimeFormat("en-US", { month: "short", day: "2-digit" })
-const dateTimeFormatter = new Intl.DateTimeFormat("en-US", { month: "short", day: "2-digit", hour: "2-digit", minute: "2-digit"})
+const dateTimeFormatter = new Intl.DateTimeFormat("en-US", { year: "numeric", month: "short", day: "2-digit"})
 
 export function formatDateFromString(date: string): string {
   const dateObj = new Date(date)
