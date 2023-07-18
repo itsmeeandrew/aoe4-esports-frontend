@@ -1,4 +1,4 @@
-const dateFormatter = new Intl.DateTimeFormat("en-US", { month: "short", day: "2-digit" })
+const dateFormatter = new Intl.DateTimeFormat("en-US", { year: "numeric", month: "short", day: "2-digit" })
 const dateTimeFormatter = new Intl.DateTimeFormat("en-US", { year: "numeric", month: "short", day: "2-digit"})
 
 export function formatDateFromString(date: string): string {
@@ -19,4 +19,9 @@ export function formatDateTimeFromString(date?: string, time?: string): string {
 
 export function getImageName(entityName: string) {
   return entityName.toLowerCase().replaceAll(" ", "_")
+}
+
+export function getTwitchNameFromUrl(url: string): string {
+  const name = url.split("/").pop();
+  return name ? name : "";
 }

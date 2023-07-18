@@ -1,0 +1,56 @@
+.container {
+  margin: 100px 0 25px 0;
+  padding: 45px;
+  width: 75%;
+  background-color: var(--tournament-bg);
+  border-radius: var(--default-border-radius);
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.logoContainer {
+  width: 20%;
+  text-align: center;
+}
+
+.informationContainer {
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title {
+  width: 100%;
+}
+
+.information {
+  font-size: var(--font-size-large);
+  width: 50%;
+
+  display: flex;
+  align-items: center;
+}
+
+.information svg:first-child {
+  font-size: 30px;
+}
+
+.information span {
+  margin-left: 10px;
+}
+
+.information a {
+  margin-right: 5px;
+}
+
+.information a:hover {
+  text-decoration: underline;
+}
+
+.tabContainer {
+  margin-top: 45px;
+}

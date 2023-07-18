@@ -19,6 +19,7 @@ export namespace Payload {
     date: string,
     time: string,
     tournament: string,
+    tournamentId: string,
     tournamentRound: string,
     tournamentRoundPhase: string,
     logoUrl: string
@@ -32,4 +33,15 @@ export namespace Payload {
     winnerPlayer: string,
     map: string
   }
+}
+
+export namespace Generic {
+  export interface KeyValuePair<T> {
+    key: string,
+    value: T
+  }
+}
+
+export namespace Component {
+  export type TabData = Generic.KeyValuePair<string>;
 }

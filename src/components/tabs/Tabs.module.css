@@ -1,0 +1,25 @@
+.tabs {
+  margin: 25px 0;
+}
+
+.tab {
+  margin: 5px 15px;
+  font-size: var(--font-size-large);
+  background-color: var(--tournament-header-bg);
+  color: var(--page-text-primary);
+  padding: 8px 17px;
+  border: none;
+  border-radius: var(--default-border-radius);
+  transition: 0.3s;
+}
+
+.activeTab {
+  background-color: var(--page-text-primary);
+  color: var(--tournament-header-bg);
+}
+
+.tab:hover {
+  background-color: var(--page-text-primary);
+  color: var(--tournament-header-bg);
+  cursor: pointer;
+}
