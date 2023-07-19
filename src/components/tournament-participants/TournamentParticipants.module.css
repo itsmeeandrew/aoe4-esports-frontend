@@ -1,0 +1,16 @@
+.container {
+  margin-top: 25px;
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.participant {
+  color: var(--page-text-primary);
+  width: 25%;
+  font-size: var(--font-size-large);
+  text-align: center;
+  padding: 40px 0;
+  min-width: 350px;
+}
