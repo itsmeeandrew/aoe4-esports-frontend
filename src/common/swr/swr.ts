@@ -28,3 +28,13 @@ export function useSeriesInTournament(tournamentId: string) {
     error
   }
 }
+
+export function useMapsInTournament(tournamentId: string) {
+  const { data, error, isLoading } = useSWR<string[]>(`http://localhost:8080/api/tournaments/${tournamentId}/maps`, fetcher)
+
+  return {
+    maps: data,
+    isLoading,
+    error
+  }
+}

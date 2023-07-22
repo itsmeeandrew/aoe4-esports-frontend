@@ -15,6 +15,7 @@ import TournamentResults from "@/components/tournament-results/TournamentResults
 import Tabs from "@/components/tabs/Tabs";
 import { Component } from "@/common";
 import TournamentParticipants from "@/components/tournament-participants/TournamentParticipants";
+import TournamentMaps from "@/components/tournament-maps/TournamentMaps";
 
 export default function TournamentDetails({ params }: { params: { id: string } }) {
   const [tab, setTab] = useState<Component.TabData>({ key: "Results", value: "Results"});
@@ -97,6 +98,10 @@ export default function TournamentDetails({ params }: { params: { id: string } }
         <div>
           <Conditional condition={tab.key === "Results"}>
             <TournamentResults tournamentId={params.id} />
+          </Conditional>
+
+          <Conditional condition={tab.key === "Maps"}>
+            <TournamentMaps tournamentId={params.id} />
           </Conditional>
 
           <Conditional condition={tab.key === "Participants"}>
