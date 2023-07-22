@@ -1,4 +1,12 @@
+.container {
+  text-align: center;
+}
+
 .image {
   border: 5px solid var(--page-text-primary);
-  border-radius: var(--default-border-radius)
+  border-radius: var(--default-border-radius);
+}
+
+.title {
+  margin-top: 5px;
 }

@@ -3,21 +3,22 @@ import Image from "next/image";
 import { getImageName } from "@/common/util";
 
 interface MapProps {
-  name: string
+  name: string,
+  size: number
 }
 
 export default function Map(props: MapProps) {
-  const { name } = props;
+  const { name, size } = props;
 
   return (
-    <>
+    <div className={styles.container}>
       <Image
         className={styles.image}
-        width={140}
-        height={140}
+        width={size}
+        height={size}
         alt={`${name} icon`}
         src={`/images/maps/${getImageName(name)}.png`} />
-      <h3>{name}</h3>
-    </>
+      <h3 className={styles.title}>{name}</h3>
+    </div>
   )
 }

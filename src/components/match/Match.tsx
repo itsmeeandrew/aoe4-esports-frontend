@@ -26,7 +26,7 @@ export default function Match(props: MatchProps) {
         <h3>{homeCivilization}</h3>
       </div>
       <div className={styles.map}>
-        <Map name={map} />
+        <Map name={map} size={140}/>
       </div>
       <div className={styles.awayCivilization}>
         <Image
