@@ -3,11 +3,6 @@
   align-items: center;
 }
 
-.image {
-  border: 5px solid var(--page-text-primary);
-  border-radius: var(--default-border-radius)
-}
-
 .homeCivilization, .map, .awayCivilization {
   text-align: center;
 }
@@ -22,6 +17,11 @@
 
 .awayCivilization {
   width: 33.3%;
+}
+
+.image {
+  border: 5px solid var(--page-text-primary);
+  border-radius: var(--default-border-radius)
 }
 
 .winner {

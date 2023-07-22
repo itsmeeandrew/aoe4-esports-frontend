@@ -2,6 +2,7 @@ import { Payload } from "@/common"
 import Image from "next/image"
 import styles from "./match.module.css"
 import { getImageName } from "@/common/util";
+import Map from "../map/Map";
 
 interface MatchProps {
   data: Payload.Match,
@@ -25,13 +26,7 @@ export default function Match(props: MatchProps) {
         <h3>{homeCivilization}</h3>
       </div>
       <div className={styles.map}>
-        <Image
-          className={styles.image}
-          width={140}
-          height={140}
-          alt={`${homeCivilization} flag`}
-          src={`/images/maps/${getImageName(map)}.png`} />
-        <h3>{map}</h3>
+        <Map name={map} />
       </div>
       <div className={styles.awayCivilization}>
         <Image
